@@ -1,0 +1,151 @@
+@import 'variables.css';
+
+/* Components specific styles */
+.logs-container {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.log-item {
+  padding: var(--space-12);
+  border-bottom: 1px solid var(--color-card-border-inner);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.log-item:last-child {
+  border-bottom: none;
+}
+
+.log-info {
+  flex: 1;
+}
+
+.log-id {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+}
+
+.log-details {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  margin-top: var(--space-2);
+}
+
+.status-badge {
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+}
+
+.status-badge.legitimate {
+  background-color: rgba(var(--color-success-rgb), 0.15);
+  color: var(--color-success);
+  border: 1px solid rgba(var(--color-success-rgb), 0.25);
+}
+
+.status-badge.fraudulent {
+  background-color: rgba(var(--color-error-rgb), 0.15);
+  color: var(--color-error);
+  border: 1px solid rgba(var(--color-error-rgb), 0.25);
+}
+
+.status-badge.suspicious {
+  background-color: rgba(var(--color-warning-rgb), 0.15);
+  color: var(--color-warning);
+  border: 1px solid rgba(var(--color-warning-rgb), 0.25);
+}
+
+/* Data Table Styles */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.data-table th,
+.data-table td {
+  padding: var(--space-12);
+  text-align: left;
+  border-bottom: 1px solid var(--color-card-border-inner);
+}
+
+.data-table th {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  background-color: var(--color-bg-1);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.data-table th:hover {
+  background-color: var(--color-bg-2);
+}
+
+.data-table tr:hover {
+  background-color: var(--color-bg-1);
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-12);
+  margin-bottom: var(--space-16);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  margin-top: var(--space-4);
+}
+
+/* Risk Score */
+.risk-score {
+  font-weight: var(--font-weight-bold);
+}
+
+.risk-low {
+  color: var(--color-success);
+}
+
+.risk-medium {
+  color: var(--color-warning);
+}
+
+.risk-high {
+  color: var(--color-error);
+}
+
+/* Export Button */
+.export-button {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  padding: var(--space-6) var(--space-12);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  transition: all var(--duration-fast) var(--ease-standard);
+}
+
+.export-button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}

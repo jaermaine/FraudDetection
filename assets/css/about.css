@@ -1,0 +1,103 @@
+/* About page specific styles */
+.about-section {
+    height: calc(100vh - 80px);
+    padding: var(--space-24);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr 1fr;
+    gap: var(--space-24);
+    overflow: hidden;
+}
+
+.about-card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-card-border);
+    padding: var(--space-20);
+}
+
+.about-card::-webkit-scrollbar {
+    width: 8px;
+}
+
+.about-card::-webkit-scrollbar-track {
+    background: var(--color-bg-1);
+    border-radius: 4px;
+}
+
+.about-card::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 4px;
+}
+
+.about-card::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}
+
+.about-card--full-width {
+    grid-column: 1 / -1;
+}
+
+.about-card h2 {
+    color: var(--color-text);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-16);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-8);
+}
+
+.about-card h3 {
+    color: var(--color-text);
+    font-size: var(--font-size-xl);
+    margin: var(--space-16) 0 var(--space-8);
+}
+
+.about-card p {
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: var(--space-12);
+}
+
+.about-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-card li {
+    margin-bottom: var(--space-8);
+    color: var(--color-text);
+    padding-left: var(--space-20);
+    position: relative;
+}
+
+.about-card li:before {
+    content: "•";
+    color: var(--color-primary);
+    position: absolute;
+    left: var(--space-8);
+}
+
+.tech-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-16);
+    margin-top: var(--space-16);
+}
+
+.tech-item {
+    background-color: var(--color-bg-1);
+    padding: var(--space-12);
+    border-radius: var(--radius-base);
+    border: 1px solid var(--color-border);
+}
+
+.tech-item h4 {
+    color: var(--color-primary);
+    margin: 0 0 var(--space-4);
+    font-size: var(--font-size-sm);
+}
+
+.tech-item p {
+    margin: 0;
+    font-size: var(--font-size-sm);
+}

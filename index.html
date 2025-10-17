@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Dashboard</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    </head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <div class="dashboard-header">
+            <h1>Fraud Detection Dashboard</h1>
+            <nav class="nav-tabs">
+                <a href="index.html" class="nav-tab active">Home</a>
+                <a href="about.html" class="nav-tab">About</a>
+            </nav>
+        </div>
+
+        <!-- Main Dashboard Content -->
+        <div class="dashboard-content dashboard-content--centered">
+            <!-- Transaction Input Form -->
+            <div class="dashboard-card dashboard-card--centered">
+                <div class="card-header">
+                    <h3 class="card-title">Analyze Transaction</h3>
+                </div>
+                <div class="card-content">
+                    <form id="transactionForm" class="transaction-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="amount">Transaction Amount</label>
+                                <input type="number" id="amount" name="amount" class="form-control" placeholder="Enter amount" required step="0.01" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="transactionType">Transaction Type</label>
+                                <select id="transactionType" name="type" class="form-control" required>
+                                    <option value="">Select type</option>
+                                    <option value="CASH_OUT">CASH_OUT</option>
+                                    <option value="DEBIT">DEBIT</option>
+                                    <option value="PAYMENT">PAYMENT</option>
+                                    <option value="TRANSFER">TRANSFER</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="oldbalanceOrg">Old Balance Origin</label>
+                                <input type="number" id="oldbalanceOrg" name="oldbalanceOrg" class="form-control" placeholder="Sender's balance before" required step="0.01" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="newbalanceOrig">New Balance Origin</label>
+                                <input type="number" id="newbalanceOrig" name="newbalanceOrig" class="form-control" placeholder="Sender's balance after" required step="0.01" min="0">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="oldbalanceDest">Old Balance Destination</label>
+                                <input type="number" id="oldbalanceDest" name="oldbalanceDest" class="form-control" placeholder="Recipient's balance before" required step="0.01" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="newbalanceDest">New Balance Destination</label>
+                                <input type="number" id="newbalanceDest" name="newbalanceDest" class="form-control" placeholder="Recipient's balance after" required step="0.01" min="0">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Analyze Transaction</button>
+                    </form>
+                    <div id="analysisResults" class="analysis-results hidden">
+                        <!-- Analysis results will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

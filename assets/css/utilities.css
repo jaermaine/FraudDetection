@@ -1,0 +1,8 @@
+/* Utility classes */
+.stat-value--error {
+    color: var(--color-error);
+}
+
+.hidden {
+    display: none;
+}
